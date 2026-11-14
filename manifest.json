@@ -1,0 +1,10 @@
+{
+  "name": "Creovia",
+  "short_name": "Creovia",
+  "description": "Create. Connect. Earn.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090b16",
+  "theme_color": "#090b16",
+  "icons": []
+}
