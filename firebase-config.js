@@ -1,10 +1,10 @@
-// Copy your Firebase Web App configuration from Firebase Console > Project settings > Your apps.
-// These values identify your Firebase project; never put private service-account keys here.
+// Firebase Web App configuration for CREOVIA.
+// These are client-side project identifiers, not service-account secrets.
 export const firebaseConfig = {
-  apiKey: "PASTE_API_KEY",
-  authDomain: "PASTE_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_PROJECT_ID",
-  storageBucket: "PASTE_PROJECT_ID.appspot.com",
-  messagingSenderId: "PASTE_MESSAGING_SENDER_ID",
-  appId: "PASTE_APP_ID"
+  apiKey: "AIzaSyDFj3U57DqsYFomcJQkgiY3pMFN0vPvFwg",
+  authDomain: "creovia-812db.firebaseapp.com",
+  projectId: "creovia-812db",
+  storageBucket: "creovia-812db.firebasestorage.app",
+  messagingSenderId: "1082544621258",
+  appId: "1:1082544621258:web:fbd91958e0660816b9d633"
 };
