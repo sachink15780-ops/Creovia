@@ -60,3 +60,15 @@ This is a **frontend demonstration**, not a production-ready service.
 **Early prototype — integrations and production backend are not yet live.**
 
 © 2026 CREOVIA
+
+
+## Firebase setup (required for real sign-in)
+
+1. Create a Firebase project at https://console.firebase.google.com/ and add a Web app.
+2. Copy its web-app config into `firebase-config.js` (replace every `PASTE_...` value). This browser config is not a service-account secret; never commit private service-account keys.
+3. In **Authentication → Sign-in method**, enable **Email/Password**, **Google**, and **Phone**.
+4. In **Authentication → Settings → Authorized domains**, add `sachink15780-ops.github.io`.
+5. Create a **Cloud Firestore** database, then publish the rules from `firestore.rules` in the Firestore Rules tab.
+6. Reload the GitHub Pages site after the config is saved and allow a minute for deployment.
+
+The current app supports Firebase email/password, Google popup, phone OTP, and per-user profile documents once configured. Phone sign-in may require reCAPTCHA and has SMS quotas/costs. Campaigns, Meta OAuth/Auto-DM, AI tools, payments, and a secure admin console are not live yet. Admin access must be enforced with server-side authorization (for example Firebase custom claims), never by hiding a button in frontend code.
