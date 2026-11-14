@@ -35,13 +35,23 @@
       <div class="eyebrow">YOUR CREOVIA ACCOUNT</div>
       <h2 id="authHeading">Create your account</h2>
       <p class="muted" id="roleCaption"></p>
+      <button class="google-btn full" id="googleBtn" type="button">Continue with Google</button>
+      <div class="auth-switch"><button type="button" class="auth-mode active" data-auth-mode="signup">Create account</button><button type="button" class="auth-mode" data-auth-mode="login">Log in</button></div>
       <form id="authForm">
-        <label>Full name<input id="name" required placeholder="Your name" autocomplete="name"/></label>
+        <label id="nameWrap">Full name<input id="name" required placeholder="Your name" autocomplete="name"/></label>
         <label>Email address<input id="email" type="email" required placeholder="you@example.com" autocomplete="email"/></label>
         <label>Password<input id="password" type="password" minlength="6" required placeholder="At least 6 characters" autocomplete="new-password"/></label>
-        <button class="primary-btn full" type="submit">Create account <span>→</span></button>
+        <button class="primary-btn full" id="emailSubmit" type="submit">Create account <span>→</span></button>
       </form>
-      <p class="fine-print">Demo account only. This prototype stores data in this browser; do not use a real password.</p>
+      <div class="auth-divider"><span>OR PHONE OTP</span></div>
+      <div class="phone-auth">
+        <label>Mobile number<input id="phoneNumber" type="tel" inputmode="tel" placeholder="+91 98765 43210"/></label>
+        <button class="ghost-btn full" id="sendOtpBtn" type="button">Send OTP</button>
+        <label id="otpWrap" class="hidden">Enter OTP<input id="otpCode" inputmode="numeric" autocomplete="one-time-code" placeholder="6-digit code"/></label>
+        <button class="primary-btn full hidden" id="verifyOtpBtn" type="button">Verify OTP</button>
+        <div id="recaptcha-container"></div>
+      </div>
+      <p class="fine-print" id="authNotice">Secure sign-in is powered by Firebase. Project configuration is required before login can work.</p>
     </section>
 
     <section class="panel hidden" id="profilePanel">
@@ -72,6 +82,6 @@
     </section>
   </main>
   <footer><span>© 2026 CREOVIA</span><span>Built for the next generation of creators.</span></footer>
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
